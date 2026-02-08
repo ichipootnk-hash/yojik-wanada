@@ -10,23 +10,6 @@ iframe {
   aspect-ratio: 16 / 9;
 }
 
-/* スマホ */
-@media screen and (max-width: 768px) {
-
-  .top-wrapper {
-    width: 100%;
-  }
-
-  .top-containts {
-    flex-direction: column;
-  }
-
-  .containts {
-    width: 100%;
-    min-height: auto;
-  }
-
-}
 
 /* タブのCSS */
 
@@ -128,5 +111,22 @@ iframe {
   border-right: 2px solid #00a5a0;
 }
 
+/* スマホ */
+@media screen and (max-width: 768px) {
+
+  .top-wrapper {
+    width: 100%;
+  }
+
+  .top-containts {
+    flex-direction: column;
+  }
+
+  .containts {
+    width: 100%;
+    min-height: auto;
+  }
+
+}
 
 
