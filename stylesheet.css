@@ -101,9 +101,19 @@
 
 /* スマホ */
 
-@media (max-width: 670px){
-  .containts{
+@media screen and (max-width: 768px) {
+
+  .top-wrapper {
     width: 100%;
-    height: 650px;
   }
+
+  .top-containts {
+    flex-direction: column;
+  }
+
+  .containts {
+    width: 100%;
+    min-height: auto;
+  }
+
 }
