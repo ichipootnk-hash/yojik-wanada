@@ -99,6 +99,17 @@
   border-right: 2px solid #00a5a0;
 }
 
+/* 共通 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
 /* スマホ */
 
 @media screen and (max-width: 768px) {
