@@ -49,6 +49,18 @@
   border-bottom: 1px solid #141515;
 }
 
+.album-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.album-img:hover {
+  transform: scale(1.05);
+}
+
+/*アルバムページ*/
 
 
 
