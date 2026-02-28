@@ -1,5 +1,11 @@
 /*共通*/
 
+.ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
 .border {
   position: relative;
   text-decoration: none;
