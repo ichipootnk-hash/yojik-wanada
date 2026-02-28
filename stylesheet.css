@@ -1,18 +1,18 @@
 /*共通*/
 
-.ul {
+.menu {
   display: flex;
   list-style: none;
   padding: 0;
 }
 
-.border {
+.menu a {
   position: relative;
   text-decoration: none;
   color: black;
 }
 
-.border::after {
+.menu a::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -24,6 +24,6 @@
   transform: translateX(-50%);
 }
 
-.border:hover::after {
+.menu a:hover::after {
   width: 100%;
 }
