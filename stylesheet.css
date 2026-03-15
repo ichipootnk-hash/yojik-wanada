@@ -31,7 +31,8 @@
 }
 
 header {
-  height: 114px;
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
 }
