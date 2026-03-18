@@ -31,7 +31,7 @@
 }
 
 header {
-  height: 40vh;
+  height: 27vh;
   display: flex;
   justify-content: center; /* 横中央 */
   align-items: center;     /* 縦中央 */
@@ -44,6 +44,9 @@ header img {
 
 
 
-.menu{
-  border: 1px solid rgb(69, 69, 69);
+.border{
+  width: 80%;
+  border-bottom: 2px solid rgb(69, 69, 69);
+  margin-bottom: 10px;
+  text-align: center;
 }
