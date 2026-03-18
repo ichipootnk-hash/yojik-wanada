@@ -33,8 +33,13 @@
 header {
   height: 40vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* 横中央 */
+  align-items: center;     /* 縦中央 */
+}
+
+header img {
+  width: 300px;   /* サイズ調整 */
+  height: auto;
 }
 
 
