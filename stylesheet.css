@@ -31,15 +31,16 @@
 }
 
 header {
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  overflow: hidden;
 }
 
-.logo_pic img {
-  width: 200px;
-  height: auto;
+header img {
+  height: 100%;
+  width: auto;
 }
 
 .menu{
