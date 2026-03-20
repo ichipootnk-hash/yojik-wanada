@@ -78,7 +78,7 @@ header img {
 }
 
 /* 年 */
-.album .year {
+.year {
   font-size: 12px;
   color: #999;
   margin-top: 15px;
@@ -86,11 +86,11 @@ header img {
 }
 
 /* タイトル */
-.album .title {
+.title {
   font-size: 16px;
   margin-top: 10px;
 }
 
 /*購入リンク*/
-.album .album-link {
+.buy-link {
 }
