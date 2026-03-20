@@ -42,11 +42,55 @@ header img {
   height: auto;
 }
 
-
-
 .border{
   width: 80%;
   border-bottom: 2px solid rgb(69, 69, 69);
   margin-bottom: 10px;
   margin: 0 auto;
+}
+
+/*MUSIC*/
+
+.music-content {
+  text-align: center;
+}
+
+/* 全体 */
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列 */
+  gap: 60px 40px; /* 縦 横 */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 各アルバム */
+.album {
+  text-align: center;
+}
+
+/* 画像 */
+.album img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* 正方形 */
+  object-fit: cover;
+  display: block;
+}
+
+/* 年 */
+.album .year {
+  font-size: 12px;
+  color: #999;
+  margin-top: 15px;
+  letter-spacing: 2px;
+}
+
+/* タイトル */
+.album .title {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/*購入リンク*/
+.album .album-link {
 }
