@@ -1,109 +1,101 @@
-/* タブのCSS */
+/*共通*/
 
-.tab {
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
-    }
-    .tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-    }
-    .tab button:hover {
-      background-color: #ddd;
-    }
-    .tab button.active {
-      background-color: #ccc;
-    }
-    .tabcontent {
-      display: none;
-      padding: 6px 24px;
-      border: 1px solid #ccc;
-      border-top: none;
-    }
-/* コンテンツのCSS */
-*{
-  box-sizing: border-box;
-}
-
-.top-wrapper {
-  width: 1170px;
-}
-
-.top-containts {
+.menu {
   display: flex;
-  flex-wrap: wrap;
-  border-top: 1px solid #141515;
-  border-left: 1px solid #141515;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  gap: 40px;
 }
 
-.containts {
-  width: 50%;
-  height: 650px;
-  border-right: 1px solid #141515;
-  border-bottom: 1px solid #141515;
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: black;
 }
 
-
-
-
-  
-
-/*アコーディオンメニューのCSS */
-.details {
-  transition: .3s;
-  overflow: hidden;
-  margin-top: -10px;
-  padding-bottom: 20px;
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: 0.3s;
+  transform: translateX(-50%);
 }
 
-.details:last-of-type {
-  margin-bottom: 0;
+.menu a:hover::after {
+  width: 100%;
 }
 
-.details[open] {
-  margin-top: 0;
-  padding-bottom: 10px;
+header {
+  height: 27vh;
+  display: flex;
+  justify-content: center; /* 横中央 */
+  align-items: center;     /* 縦中央 */
 }
 
-.details-summary {
+header img {
+  width: 300px;   /* サイズ調整 */
+  height: auto;
+}
+
+.border{
+  width: 80%;
+  border-bottom: 2px solid rgb(69, 69, 69);
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+
+/*MUSIC*/
+
+.music-content h1 {
+  text-align: center;
+}
+
+/* 全体 */
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列 */
+  gap: 60px 40px; /* 縦 横 */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 各アルバム */
+.album {
+  text-align: center;
+}
+
+/* 画像 */
+.album img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* 正方形 */
+  object-fit: cover;
   display: block;
-  padding: 15px;
-  transition: .3s;
-  transform: translateY(10px);
-  background-color: #56904c;
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  cursor: pointer;
+  transition: 0.4s ease;
+}
+.album:hover img {
+  transform: scale(1.05); /* 少し拡大 */
+  filter: brightness(70%); /* 少し暗く */
 }
 
-.details-summary::-webkit-details-marker {
-  display: none;
+/* 年 */
+.year {
+  font-size: 12px;
+  color: #999;
+  margin-top: 15px;
+  letter-spacing: 2px;
 }
 
-.details[open] .details-summary {
-  transform: translateY(0);
+/* タイトル */
+.title {
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-.details-content {
-  padding: 20px;
-  background-color: #ffffff;
-  border-bottom: 2px solid #00a5a0;
-  border-left: 2px solid #00a5a0;
-  border-right: 2px solid #00a5a0;
-}
-
-/* スマホ */
-
-@media (max-width: 670px){
-  .containts{
-    width: 100%;
-    height: 650px;
-  }
+/*購入リンク*/
+.buy-link {
 }
