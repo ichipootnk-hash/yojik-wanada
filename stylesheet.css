@@ -75,11 +75,6 @@ header img {
   aspect-ratio: 1 / 1;   /* 正方形 */
   object-fit: cover;
   display: block;
-  transition: 0.4s ease;
-}
-.album:hover img {
-  transform: scale(1.05); /* 少し拡大 */
-  filter: brightness(70%); /* 少し暗く */
 }
 
 /* 年 */
@@ -96,6 +91,46 @@ header img {
   margin-top: 10px;
 }
 
-/*購入リンク*/
-.buy-link {
+/* ボタン */
+.button-group {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* 共通ボタン */
+.btn {
+  text-decoration: none;
+  font-size: 12px;
+  padding: 8px 14px;
+  border: 1px solid #333;
+  color: #333;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+/* 詳細ボタン */
+.btn.detail:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* 購入ボタン */
+.btn.buy {
+  border: 1px solid #0077cc;
+  color: #0077cc;
+}
+
+.btn.buy:hover {
+  background: #0077cc;
+  color: #fff;
+}
+
+/*フッター*/
+footer {
+  width: 80%;
+  text-align: center;
+  margin: 50px auto 0;
+  border-top: 2px solid rgb(69, 69, 69);
 }
