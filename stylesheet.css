@@ -127,6 +127,42 @@ header img {
   color: #fff;
 }
 
+/*アルバム詳細*/
+
+/*共通*/
+.detail-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.detail-content img {
+  width: 35%;
+  display: block;
+  margin: 0 auto;
+}
+
+/*リスト*/
+ol {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: item;
+}
+
+ol li {
+  counter-increment: item;
+  display: flex;
+  justify-content: center; /* 全体を中央に */
+}
+
+ol li::before {
+  content: counter(item) ".";
+  width: 2em; /* ←ここで番号の幅を固定 */
+  text-align: right;
+  margin-right: 0.5em;
+}
+
+
+
 /*フッター*/
 footer {
   width: 80%;
