@@ -135,42 +135,26 @@ header img {
   margin: 0 auto;
   padding: 20px;
 }
-.detail-top img {
-  width: 400px; 
-  height: 400px;
+.detail-content img {
+  width: 35%;
   display: block;
+  margin: 0 auto;
+}
+.detail-text {
+  text-align: center;
 }
 
 /*リスト*/
-.detail-topper {
-  display: flex;
-  gap: 40px; /* 画像とリストの間隔 */
-  align-items: stretch;
-}
-
-.detail-list {
-  flex: 1; 
-  display: flex;
-  justify-content: center;
-}
-
-.detail-list-inner {
-  display: inline-block;
-  text-align: left; 
-}
-
 ol {
   list-style: none;
   padding-left: 0;
   counter-reset: item;
-  margin: 0 auto;
-  text-align: left;
 }
 
 ol li {
   counter-increment: item;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center; /* 全体を中央に */
 }
 
 ol li::before {
