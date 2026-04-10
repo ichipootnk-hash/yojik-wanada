@@ -4,7 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheet.css">
+
+  <style>
+    /* ===== コメントエリア ===== */
+    .comments {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .comment {
+      border-bottom: 1px dotted #999;
+      padding: 30px 0;
+    }
+
+    .name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      line-height: 1.8;
+      color: #555;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    /* 3行制限 */
+    .preview {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* フェードアウト（いい感じになる） */
+    .preview::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 40px;
+      width: 100%;
+      background: linear-gradient(to bottom, transparent, #fff);
+    }
+
+    .more-btn {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #2563eb;
+      cursor: pointer;
+    }
+
+    .more-btn::before {
+      content: "▶ ";
+    }
+
+    .more-btn.open::before {
+      content: "▼ ";
+    }
+  </style>
+
 </head>
+
 <body>
   <header>
     <a href="/index.html">
@@ -14,32 +77,145 @@
 
   <div class="tab-menu">
     <ul class="menu">
-      <li>
-        <a href="/index.html">INFO</a>
-      </li>
-      <li>
-        <a href="/MUSIC/music.html">MUSIC</a>
-      </li>
-      <li>
-        <a href="/VIDEO/video.html">VIDEO</a>
-      </li>
-      <li>
-        <a href="/LIVE/live.html">LIVE</a>
-      </li>
-      <li>
-        <a href="https://yojikwanda.thebase.in/" target="_blank">SHOP</a>
-      </li>
-      <li>
-        <a href="/BIO/bio.html">BIO</a>
-      </li>
+      <li><a href="/index.html">INFO</a></li>
+      <li><a href="/MUSIC/music.html">MUSIC</a></li>
+      <li><a href="/VIDEO/video.html">VIDEO</a></li>
+      <li><a href="/LIVE/live.html">LIVE</a></li>
+      <li><a href="https://yojikwanda.thebase.in/" target="_blank">SHOP</a></li>
+      <li><a href="/BIO/bio.html">BIO</a></li>
     </ul>
     <div class="border"></div>
+  </div>
+
+  <!-- ✅ コメントセクション追加 -->
+  <div class="comments">
+
+    <h1>アルバム「シーセイ」にお寄せいただいたコメントです。
+      どうもありがとうございます（順不同）。
+    </h1>
+
+    <div class="comment">
+      <div class="name">河合愼五/カタリカタリ　百景借景　しょうにゅうどう</div>
+      <div class="text preview">
+        これまでの作品の素晴らしさが故にハードルを上げまくって聞いた6年ぶりの新作「シーセイ」。
+        見事にそれぞれの楽曲バラバラの方向性で、メロディ、サウンド，歌詞それぞれに変な違和感が残る曲ばかりです。
+        凝り固まった頭では残念ながら聴きたいようにしか聴けないし、感じたいようにしか感じられない。そんな狭まった視野をぐいっと広げてくれる違和感のある曲たち。
+        特に最後の曲を聴いた時は甘美なメロディに魂が抜け落ち掛かって埴輪みたいな顔になり危ないところでした。
+        yojikとwandaはドラマやCMのタイアップがあるわけでもありませんし、某音楽誌が「今年の最高傑作！」と持ち上げたりもしません。二人を知らない人がここに辿り着くには少々遠回りを強いられるわけですが、少しでも多くの人がこの作品に出会う幸運に巡り会えることを望んでます。
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">大田こぞう／LOVE FM　月下虫音DJ</div>
+      <div class="text preview">
+        「お伽話の中のリアル」
+
+          ヘンゼルとグレーテルが誘い込まれたお菓子の家の甘い甘い焼き菓子の香り。
+          バターにバニラ、オレンジ、シナモン、カスタード、アーモンドにブランデー。。
+          鼻の穴が膨らみます。
+          でもそんな香りに紛れて、ほんのごくわずか、
+          鼻の奥を突いて来る刺激臭。
+          コレはかの魔女が密かに煮立てた魔法のニオイ。。
+          ヨーワンを聴くといつも微かに『お伽話のB面のニオイ』がするのです。
+          それはお伽話を生々しい現実へと連れ戻す本物の魔法。
+          え、気のせいですか?
+          そして『シーセイ』。今までで一番そんなニオイがしていますよ！！
+          みんなも嗅いでみて！
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">蒔蘿</div>
+      <div class="text preview">
+        きのうの続き、という言葉が浮かんできた。
+        誰にとっても今日という日はずっと前から昨日の続きだ。ただわたしが「シーセイ」から受け取ったのはそれとは別の、個人的な事情による時間感覚のことなのでそこはどうかお赦しを。
+        それは収録曲の多くが2020年にBandcampで発表された録音を元にしていて、あの年、多くの表現活動をする人たちが滞らないための術を模索する中、お二人が毎月粛々とアップし続けた曲たちを耳にしていたからだ。ところが自分は全然あさっての方向への変化の渦中にあって、その頃から徐々に音楽全般に距離を置くような状態になっていく。関わりがあった人たちとも疎遠になっていた(いる。進行形)のだけど、今年の始めにyojikさんが連絡をくださり、また少しして春に新譜が出るとうかがい、嬉しくも、ナイトレイン以来なんだと驚き、送っていただいた音のデータを聴いてさらに、あれ⁉︎この感覚は一体？となった。言葉にするなら、きのうの続き。
+        もちろん初めて聴く曲もあるし、聴いたはずの曲ももはや新鮮なくらい、だけど。ああ、でも知ってる。音を出している人たちの顔も浮かぶ。しっかりまとめたから安心して聴いてよ、と言ってくれてるような佇まいで、いらっしゃる。丸4年くらいの、わたしにとっての空白がまるで存在しなかったように。
+        ように、じゃない。空白はわたしが設定しただけだった。
+
+        楽曲について細やかに書くのは苦手なので端的に。どれも絶妙なバランスで成り立っている。超越的であり日常的。そこに希望をもらう。不意に、そして多様に爆発する。ことばが好き(引っかかって二度見状態が起きまくる)。結局のところいい曲だ！となってしまう包容力。装幀、ばちこん過ぎてやばい。たぶんyojikとwanda史上、もっとも好きなアルバムです。
+
+        「本を読む」という曲があるから、だけじゃなく全体を通じて、自分の中では小学校の高学年くらいに市の図書館とか、学校の図書室に入り浸って、不思議な内容の本を見つけては読み耽ったあの時間が、おそらくは装幀も相まって、どうにも呼び起こされてしまう。いや目の前にある。わたしだけなんだろうか。
+        このアルバムが悩める少年少女の心を慰めたり、おどらせたりしている、そんな世の中であってもよいー。
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">Minoda</div>
+      <div class="text preview">
+        人類が初めて経験するコロナ禍からのロックダウンの最中にリリースが始まった楽曲たち。仕事がリモートになった人も多いと思うし僕もそう、だけどyojikとwandaは「あ、うちらそもそも遠距離ユニットなんで。」な感じがあって、強みよ！なんて思ったり。
+
+        リモートワークしながら聴いてました。Lament好き！とかリカーのコーラスほっこりするわ〜とか yadayoの俺やだよってほんとイヤそ〜ワツゴーインノーンなんて思ったり（曲名はあえて配信時の記載にさせてください！）。アルバムバージョン聴いても、あの頃の長い春休みみたいな感じがフラッシュバックするな〜。
+
+        コロナで生活様式も色々変わってライブに足を運ぶ機会もめっきり減ってしまったけど、今回のCDでのアルバムリリース、やっぱフィジカルを伴って世に出してくれるのはとても嬉しい事なんだなと改めて。そしてライブ行きます！やっぱフィジカルコンタクトもとても大事。
+
+        6年ぶりのアルバムリリースありがとうございます&おめでとうございます٩( ᐛ )و
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">志子田勇／「映画の朝ごはん」監督</div>
+      <div class="text preview">
+        yojikとwandaは社会を生きる私たちのことを歌っている。世界じゃなく社会。日銭を得て生活する社会。
+
+        時折「わたしなんで働いてるんだっけ？」と思うことはあるけど、生きてくためにはしょうがない。でも・・。
+
+        あー寂しくって幸せ！
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">松永良平(リズム&ペンシル)</div>
+      <div class="text preview">
+        朝よ！とドアを叩く音がしたと思ったらいきなりはじまる生活はだれかのドラマ。思考と言葉が混線する毎日はそれぞれの戦場で、押し出されるように歩き出すその道すがらに交錯する「うまく歩けやしないよ」と「やすんでいきなよ」。言いたいことばかりでやかましい世の中に、鳴かぬなら鳴かんでもいいよホトトギス。人生よりも速いスピードで先を急ぐ急行の窓から一瞬見えた幼稚園児たちがこっちに手を振っていて猛烈に泣きたくなるような瞬間がこの音楽にはたくさんある。シーセイでShe sayで市井で私生。ステキでスルドクてスルメ。彼らにしかできない手仕事みたいでアバンでギャルドな奇跡が朝飯前のようにまた目の前に差し出されて、ぼくはまた一心に食べるだけです。
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">おざわさよこ／イラストレーター</div>
+      <div class="text preview">
+        さて、もうわたしには音楽を適切な言葉であらわす力はないのですが（元々なかったかも）、yojikとwandaの新譜はすばらしいです。
+
+        確かな技術とポップネスの中の、孤独とか反骨みたいなものがわたしにとってとても心地よくて、会ってお話したことはまだないのにyojikさんたちのことが大好きになってしまう、そういうアルバムだと思います。
+
+        ああこの場でじっとしていられない！と絵を描くときよく思う、yojikさんたちの音楽からもそれを感じます。
+
+        高森さん（※「シーセイ」ジャケットデザイナー）と、ちゃんとしないこと、はみ出ること、オルタナティブであること、みたいな話をすることがあるんだけど、yojikさんたちも同じ言語をもっていて、良い連帯でジャケットをつくることができた気がします。
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
   </div>
 
   <footer>
     <p>&copy; 2026 yojikとwanda. All rights reserved.</p>
   </footer>
 
+  <!-- ✅ JS追加 -->
+  <script>
+    const buttons = document.querySelectorAll(".more-btn");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const text = btn.previousElementSibling;
+
+        text.classList.toggle("preview");
+        btn.classList.toggle("open");
+
+        if (btn.classList.contains("open")) {
+          btn.textContent = "閉じる";
+        } else {
+          btn.textContent = "続きはこちら";
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

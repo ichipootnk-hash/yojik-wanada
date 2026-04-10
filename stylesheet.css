@@ -180,6 +180,39 @@ ol li::before {
   margin-right: 0.5em;
 }
 
+/*BIO*/
+.profile-contents { 
+  width: 80%;
+  margin: 0 auto; 
+}
+
+
+.profile-img {
+  margin-top: 30px;
+  display: flex;
+}
+
+.profile-img img {
+  width: 396px; 
+  height: 529px;
+  display: block;
+}
+
+.profile-txt {
+  padding-left: 20px;
+}
+
+.btn.subscribe { 
+  color: rgb(33, 72, 201);
+}
+
+.btn.youtube {
+  color: rgb(177, 1, 1);
+}
+
+.btn.Bandcamp {
+  color: rgb(197, 90, 18);
+}
 
 
 /*フッター*/
