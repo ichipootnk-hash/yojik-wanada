@@ -131,27 +131,37 @@ header img {
 
 /*共通*/
 .detail-content {
-  width: 80%;
+  max-width: 900px; /* ←追加 */
+  width: 90%;
   margin: 0 auto;
-  padding: 20px;
 }
+.detail-top {
+  flex: 1;
+  max-width: 400px;
+}
+
 .detail-top img {
-  width: 400px; 
-  height: 400px;
-  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 /*リスト*/
 .detail-topper {
   display: flex;
-  gap: 40px; /* 画像とリストの間隔 */
-  align-items: stretch;
+  gap: 60px; /* 少し広げる */
+  align-items: flex-start; /* ←ここ重要 */
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .detail-list {
   flex: 1; 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* ←変更 */
 }
 
 .detail-list-inner {
@@ -171,6 +181,8 @@ ol li {
   counter-increment: item;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 8px;
+  font-size: 15px;
 }
 
 ol li::before {
@@ -178,6 +190,13 @@ ol li::before {
   width: 2em; /* ←ここで番号の幅を固定 */
   text-align: right;
   margin-right: 0.5em;
+}
+
+.track-title {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
 /*BIO*/
@@ -221,4 +240,80 @@ footer {
   text-align: center;
   margin: 50px auto 0;
   border-top: 2px solid rgb(69, 69, 69);
+}
+
+/* ===== NEWS一覧 ===== */
+.news-container {
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+/* 記事 */
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px dotted #aaa;
+}
+
+.post-left {
+  flex: 1;
+}
+
+.post .date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.post .title {
+  font-size: 20px;
+}
+
+/* コメント */
+.post .comment {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* リンクの見た目リセット */
+.post {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 画像 */
+.post-right img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: top;
+  object-position: 50% 30%;
+}
+
+/* ===== ページネーション ===== */
+.pagination {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.pagination button {
+  margin: 0 6px;
+  padding: 6px 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #2563eb;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  color: black;
 }
