@@ -317,3 +317,123 @@ footer {
   font-weight: bold;
   color: black;
 }
+
+/*INFO記事*/
+
+/* ===== 全体 ===== */
+body {
+  background: #f5f5f5;
+  color: #111;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+/* ===== ラッパー ===== */
+.article-wrapper {
+  max-width: 800px;
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+/* ===== タイトル ===== */
+.article-title h1 {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* ===== 日付 ===== */
+.article-date {
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* ===== 画像 ===== */
+.article-image {
+  display: flex;
+  justify-content: center;
+}
+
+.article-image img {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+/* ===== 本文 ===== */
+.article-txt {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  line-height: 2;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ===== テキスト段落 ===== */
+.article-txt p {
+  margin: 0;
+}
+
+/* ===== リンク ===== */
+.article-txt a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* ===== 動画対応 ===== */
+.article-image iframe {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  background: #000;
+}
+
+/* 画像と動画の共通ラッパー調整 */
+.article-image {
+  display: flex;
+  justify-content: center;
+}
+
+/*VIDEO*/
+
+/* ===== 全体 ===== */
+.video-wrapper {
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+/* ===== 各動画ブロック ===== */
+.video-containts {
+  margin-bottom: 60px;
+}
+
+/* ===== タイトル ===== */
+.video-containts p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* ===== 動画 ===== */
+.video-containts iframe {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* ===== 全体余白調整 ===== */
+.video-wrapper:last-child {
+  margin-bottom: 80px;
+}

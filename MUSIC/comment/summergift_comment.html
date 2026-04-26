@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheet.css">
+
+  <style>
+    /* ===== コメントエリア ===== */
+    .comments {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .comment {
+      border-bottom: 1px dotted #999;
+      padding: 30px 0;
+    }
+
+    .name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      line-height: 1.8;
+      color: #555;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    /* 3行制限 */
+    .preview {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* フェードアウト（いい感じになる） */
+    .preview::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 40px;
+      width: 100%;
+      background: linear-gradient(to bottom, transparent, #fff);
+    }
+
+    .more-btn {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #2563eb;
+      cursor: pointer;
+    }
+
+    .more-btn::before {
+      content: "▶ ";
+    }
+
+    .more-btn.open::before {
+      content: "▼ ";
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <a href="/index.html">
+      <img src="/picture/logo_pic.png" alt="Logo">
+    </a>
+  </header>
+
+  <div class="tab-menu">
+    <ul class="menu">
+      <li><a href="/index.html">TOP</a></li>
+      <li><a href="/MUSIC/music.html">MUSIC</a></li>
+      <li><a href="/VIDEO/video.html">VIDEO</a></li>
+      <li><a href="https://note.com/yojik0731/n/n2606e1108cda" target="_blank">LIVE</a></li>
+      <li><a href="https://yojikwanda.thebase.in/" target="_blank">SHOP</a></li>
+      <li><a href="/BIO/bio.html">BIO</a></li>
+    </ul>
+    <div class="border"></div>
+  </div>
+
+  <!-- ✅ コメントセクション追加 -->
+  <div class="comments">
+
+    <h1>アルバム「Summer Gift」にお寄せいただいたコメントです。
+      どうもありがとうございます（順不同）。
+    </h1>
+
+    <div class="comment">
+      <div class="name">大田こぞう（DJ／LOVE FM「月下虫音」）</div>
+      <div class="text preview">
+        もともとyojikとwandaの音楽の中に
+        チラリチラリと見え隠れしていた
+        cynical sweetな世界を
+        表沙汰にして一気に具現化してくれたような
+        痒いところに手が届いた、と言いますか
+        馴染みの遊園地も
+        夜行くとまた一味違うよね、と言いますか
+        追いかけても追いかけても追いつけない
+        夏の逃げ水をついに捕まえたような
+        そんな気持ちになりました
+        これぞ、リミックス。
+
+        ボーナストラック達に関してましては、、
+        すんなりとは聴かせてくれないなぁ（笑）
+        って感じです
+        「大きなカブ」、だいぶヤバいです
+        聴きながら「凄い。。」って呟いてしまいました
+        音の雰囲気をあちらこちらでコソピ～っと
+        裏切ってまわる言葉のチョイス
+        「二度見」ならぬ「二度聴き」を何度もしてしまいましたよ
+        ライブ音源はヨーワンの世界観に元々ある暖かさや緊張感、切なさが増幅されていて
+        まるで映画を見ているようです
+        ガーサスボーナス。
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">千ヶ崎学（ベーシスト／KIRINJI）</div>
+      <div class="text preview">
+        「ぼくはよーわんの大ファンです。
+        おふたりの音には、人生の沢山の襞が不思議なアンバランスさで、
+        時には崩壊しそうな勢いで、ぎゅうっと詰まっています。
+        腹よじれて笑った後にはなぜだか泣けてきます。
+        そして必ず元気が出るんです。」
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">梅原ヨシヒロ（シンガーソングライター・富山）</div>
+      <div class="text preview">
+        ワンダさんの奔放で不安定な才能をきりりとまとめあげるヨージクさん、な稀有なチーム。
+        （個人的印象）
+        伏目がちな視点さえユーモラスに昇華してしまうのはこの二人ならではの妙味です。
+        そしてこの二人の生む情感は乾いた殺伐とした景色に
+        しとしと降る雨のように滲み込んでいろんなものを蘇らせていきます。」
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">中川理沙（ザ・なつやすみバンド／うつくしきひかり）</div>
+      <div class="text preview">
+        「昨年『ナツ三部作』がフリーダウンロードという形でリリースされたとき、
+        とても衝撃を受けました。例年通り夏バテでぐったりしていたわたしの耳を
+        涼やかな風が通り抜けて、夏を彩ってくれました。感動して泣いた。
+        2人の歌声にはいつもきゅんとして、救われるような気持ちになる。
+        3曲とも好きすぎてどれほど聴いたかな…🤔
+
+        そんな3曲がリマスタリングされ、リミックスされ、
+        今年の夏もやってきてくれたのがとてもうれしいです。
+        3曲ともそれぞれに夏感が増して味わい深い最高のリミックス…！
+        ボーナストラックの豊かさもヨーワンらしくて、愛おしすぎます！！
+        ラブ！ずっと聴くよ！
+        わたしも夏が大好きだ！！」
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">丸山　晃（ねむたい目レコード）</div>
+      <div class="text preview">
+        「昨年のナツ三部作の最終曲のアップロードの日の夜にイベントでＤＪする予定があったので、
+        お願いしてアップロードを昼間にしてもらって、三曲ともＤＪで流すことができました。
+        大きなスピーカーで気持ちよかったなあ。
+        そしたら今年はリミックスも入ってＤＪ仕様風なＣＤ発売で、
+        吉田さんところに注文して届きました！
+        今度の日曜日にライブ企画をするので、かけちゃおうかなあ。。
+        曲ごとにジャケットまで作って、
+        すごいメンバーでしっかり録音したのにフリーダウンロードなのかと思えば、
+        しっかりプレスしたＣＤに録音状態バラバラなトラックを12曲も、
+        こんな必要あったのかしら。。
+        思えばyojikさん、wandaくんとの出会いはBandcampなんか
+        まだ存在しない10年ちょっと前のケロログでした。
+        宅録音源が公開されるのが毎日楽しみでたくさんダウンロードして
+        大好きで何度も聴いてたんだけど、パソコン壊れて半分以上は消えちゃった。。
+        でも今度はちゃんとＣＤに記録されているから、
+        僕が大好きで何度も聴いたみたいにいろんな人に届くといいなと思います。
+        もちろん僕もまだまだ長い付き合いになりそうです。」
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+    <div class="comment">
+      <div class="name">藤井邦博（魚座／北九州）</div>
+      <div class="text preview">
+        「わんださん
+        こんにちは。ご無沙汰しています、お変わりありませんか。
+        自分は先月終わり頃引っ越しました(まだ作業終わってないけど)。
+        自分の好きな足立山て山がきれいに見える部屋で、わりと気に入ってます。
+        いつか小倉に来るときには遊びに来てください。
+
+        メールと新しいアルバムありがとうございます。返事が遅くなってごめんなさい、
+        でも作業しながらよく聴いてました。「ナツ」のリミックス、いいですね。
+        ひとりでずっときけるなーと思った。
+        いちばん笑ったのは「それいけ探検隊」です、なんだこりゃと思いました。
+        全然意味がわからないです。
+        そして最後の3曲がとても好きです。
+        空中分解の曲では、本を縛る作業していた手が止まってしまいました。
+        あと、yojikさんファンの自分としては「フィロカリア」0:47の声でご飯三杯いけます、
+        ほんとうにありがとうございます。
+        声といえば「ナツ」のyojikさんの「あー」てところも、ほんっっとにいいですね怒。
+
+        めっきりお中元とは無縁の生活送っている自分でしたが、
+        素敵な贈り物ありがとうございました、ではまた。」
+
+        （注／最後の3曲は、藤井さんに渡したデモバージョンでは「自然学校」「Disintegration in midair」「フィロカリア」の並びでした。また「空中分解」はデモ時のタイトルで、CDでは「Disintegration in midair」となっています）
+      </div>
+      <div class="more-btn">続きはこちら</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 yojikとwanda. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ JS追加 -->
+  <script>
+    const buttons = document.querySelectorAll(".more-btn");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const text = btn.previousElementSibling;
+
+        text.classList.toggle("preview");
+        btn.classList.toggle("open");
+
+        if (btn.classList.contains("open")) {
+          btn.textContent = "閉じる";
+        } else {
+          btn.textContent = "続きはこちら";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
