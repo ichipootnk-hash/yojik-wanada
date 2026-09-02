@@ -75,11 +75,6 @@ header img {
   aspect-ratio: 1 / 1;   /* 正方形 */
   object-fit: cover;
   display: block;
-  transition: 0.4s ease;
-}
-.album:hover img {
-  transform: scale(1.05); /* 少し拡大 */
-  filter: brightness(70%); /* 少し暗く */
 }
 
 /* 年 */
@@ -96,6 +91,438 @@ header img {
   margin-top: 10px;
 }
 
-/*購入リンク*/
-.buy-link {
+/* ボタン */
+.button-group {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* 共通ボタン */
+.btn {
+  text-decoration: none;
+  font-size: 12px;
+  padding: 8px 14px;
+  border: 1px solid #333;
+  color: #333;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+/* 詳細ボタン */
+.btn.detail:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* 購入ボタン */
+.btn.buy {
+  border: 1px solid #0077cc;
+  color: #0077cc;
+}
+
+.btn.buy:hover {
+  background: #0077cc;
+  color: #fff;
+}
+
+/*アルバム詳細*/
+
+/*共通*/
+.detail-content {
+  max-width: 900px; /* ←追加 */
+  width: 90%;
+  margin: 0 auto;
+}
+.detail-top {
+  flex: 1;
+  max-width: 400px;
+}
+
+.detail-top img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/*リスト*/
+.detail-topper {
+  display: flex;
+  gap: 60px; /* 少し広げる */
+  align-items: flex-start; /* ←ここ重要 */
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.detail-list {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-start; /* ←変更 */
+}
+
+.detail-list-inner {
+  display: inline-block;
+  text-align: left; 
+}
+
+ol {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: item;
+  margin: 0 auto;
+  text-align: left;
+}
+
+ol li {
+  counter-increment: item;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+ol li::before {
+  content: counter(item) ".";
+  width: 2em; /* ←ここで番号の幅を固定 */
+  text-align: right;
+  margin-right: 0.5em;
+}
+
+.track-title {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/*BIO*/
+.profile-contents { 
+  width: 80%;
+  margin: 0 auto; 
+}
+
+
+.profile-img {
+  margin-top: 30px;
+  display: flex;
+}
+
+.profile-img img {
+  width: 396px; 
+  height: 529px;
+  display: block;
+}
+
+.profile-txt {
+  padding-left: 20px;
+}
+
+.btn.subscribe { 
+  color: rgb(33, 72, 201);
+}
+
+.btn.youtube {
+  color: rgb(177, 1, 1);
+}
+
+.btn.Bandcamp {
+  color: rgb(197, 90, 18);
+}
+
+
+/*フッター*/
+footer {
+  width: 80%;
+  text-align: center;
+  margin: 50px auto 0;
+  border-top: 2px solid rgb(69, 69, 69);
+}
+
+/* ===== NEWS一覧 ===== */
+.news-container {
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+/* 記事 */
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px dotted #aaa;
+}
+
+.post-left {
+  flex: 1;
+}
+
+.post .date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.post .title {
+  font-size: 20px;
+}
+
+/* コメント */
+.post .comment {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* リンクの見た目リセット */
+.post {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 画像 */
+.post-right img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: top;
+  object-position: 50% 30%;
+}
+
+/* ===== ページネーション ===== */
+.pagination {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.pagination button {
+  margin: 0 6px;
+  padding: 6px 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #2563eb;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  color: black;
+}
+
+/*INFO記事*/
+
+/* ===== 全体 ===== */
+body {
+  background: #f5f5f5;
+  color: #111;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+/* ===== ラッパー ===== */
+.article-wrapper {
+  max-width: 800px;
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+/* ===== タイトル ===== */
+.article-title h1 {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* ===== 日付 ===== */
+.article-date {
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* ===== 画像 ===== */
+.article-image {
+  display: flex;
+  justify-content: center;
+}
+
+.article-image img {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+/* ===== 本文 ===== */
+.article-txt {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  line-height: 2;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ===== テキスト段落 ===== */
+.article-txt p {
+  margin: 0;
+}
+
+/* ===== リンク ===== */
+.article-txt a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* ===== 動画対応 ===== */
+.article-image iframe {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  background: #000;
+}
+
+/* 画像と動画の共通ラッパー調整 */
+.article-image {
+  display: flex;
+  justify-content: center;
+}
+
+/*VIDEO*/
+
+/* ===== 全体 ===== */
+.video-wrapper {
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+/* ===== 各動画ブロック ===== */
+.video-containts {
+  margin-bottom: 60px;
+}
+
+/* ===== タイトル ===== */
+.video-containts p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* ===== 動画 ===== */
+.video-containts iframe {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* ===== 全体余白調整 ===== */
+.video-wrapper:last-child {
+  margin-bottom: 80px;
+}
+
+/* ===================== */
+/* スマホ対応 */
+/* ===================== */
+@media (max-width: 768px) {
+
+  /* メニュー */
+  .menu {
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  /* ヘッダー */
+  header {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  header img {
+    width: 200px;
+  }
+
+  /* アルバム一覧 → 1列 */
+  .album-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  /* アルバム詳細 → 縦並び */
+  .detail-topper {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .detail-top {
+    max-width: 100%;
+  }
+
+  /* BIO画像 → 縦 */
+  .profile-img {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile-txt {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  /* NEWS → 縦 */
+  .post {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .post-right img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 記事 */
+  .article-wrapper {
+    padding: 0 20px;
+  }
+
+  .article-txt {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* 動画 */
+  .video-containts iframe {
+    width: 100%;
+  }
+
+  /* フッター */
+  footer {
+    width: 90%;
+  }
 }
