@@ -30,16 +30,36 @@
   width: 100%;
 }
 
+
 header {
   height: 27vh;
   display: flex;
-  justify-content: center; /* 横中央 */
-  align-items: center;     /* 縦中央 */
+  justify-content: center;
+  align-items: center;
 }
 
-header img {
-  width: 300px;   /* サイズ調整 */
+/* 画像全体を横並び */
+.logo_pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px; /* ロゴとの間隔 */
+}
+
+/* ロゴ */
+.header-logo {
+  width: 550px;
   height: auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* イラスト */
+.header-illust {
+  width: 120px; /* ←ここだけ調整 */
+  height: auto;
+  flex-shrink: 0;
 }
 
 .border{
@@ -438,6 +458,15 @@ body {
   margin-bottom: 80px;
 }
 
+/* ===== 改行用クラス ===== 
+　　<br class="sp-only">をHTMLの改行したい箇所に挿入
+　　メディアクエリ適用外ではnone
+    メディアクエリ適用内だとblockとなりスマホ画面では改行*/
+.sp-only {
+  display: none;
+}
+
+
 /* ===================== */
 /* スマホ対応 */
 /* ===================== */
@@ -456,8 +485,27 @@ body {
     padding: 20px 0;
   }
 
-  header img {
+  .logo_pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  /* 中央ロゴ */
+  .header-logo {
     width: 200px;
+    height: auto;
+  }
+
+  /* 左右イラスト */
+  .header-illust {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
   }
 
   /* アルバム一覧 → 1列 */
@@ -524,5 +572,10 @@ body {
   /* フッター */
   footer {
     width: 90%;
+  }
+
+  /*==== スマホ用改行 ====*/
+  .sp-only {
+    display: block;
   }
 }
